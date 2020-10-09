@@ -23,6 +23,13 @@ body {
 
 a {
   text-decoration: none;
+  color: #2c3e50 !important;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 input:focus,
