@@ -1,5 +1,5 @@
 <template>
-  <button class="button" @click.prevent="event">{{ text }}</button>
+  <button :class="`button ${this.classProp}` " @click.prevent="event">{{ text }}</button>
 </template>
 
 <script>
@@ -7,6 +7,10 @@ export default {
   props: {
     text: String,
     event: Function,
+    classProp: {
+      type: String,
+      default: "",
+    },
   },
 };
 </script>
@@ -21,5 +25,8 @@ export default {
   width: 30%;
   cursor: pointer;
   color: white;
+  &.cartlist{
+    width: 15%;
+  }
 }
 </style>

@@ -69,7 +69,6 @@ export default {
         email: this.email,
         message: this.message,
       };
-      console.log(datas);
       this.toggleModal();
     },
     toggleModal: function () {

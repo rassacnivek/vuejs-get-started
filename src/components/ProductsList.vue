@@ -22,7 +22,9 @@
             <div class="products__item-title">{{ product.title }}</div>
           </div>
           <div class="products__item-category">{{ product.category }}</div>
-          <div class="products__item-price">$ {{ product.price }}</div>
+          <div class="products__item-price">
+            $ {{ formatPrice(product.price) }}
+          </div>
           <div class="products__item-description">
             {{ product.description }}
           </div>
@@ -33,10 +35,12 @@
 </template>
 
 <script>
+import Format from "@/mixins/Format";
 export default {
   props: {
     products: Array,
   },
+  mixins: [Format],
 };
 </script>
 

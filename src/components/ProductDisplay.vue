@@ -12,15 +12,20 @@
         <div class="text__content-title">{{ product.title }}</div>
         <div class="text__content-description">{{ product.description }}</div>
       </div>
+      <Button text="Add" :event="() => addToCart(product)" />
     </div>
   </div>
 </template>
 
 <script>
+import Button from "@/components/Button";
+import Cart from "@/mixins/Cart";
 export default {
+  components: { Button },
   props: {
-    product: Array,
+    product: Object,
   },
+  mixins: [Cart],
 };
 </script>
 
@@ -45,6 +50,7 @@ export default {
         justify-content: space-between;
       }
       &__content {
+        margin-bottom: 10px;
         &-title {
           font-size: 24px;
           font-weight: 700;

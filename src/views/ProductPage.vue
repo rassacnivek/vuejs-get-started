@@ -14,7 +14,7 @@ export default {
   data: function () {
     return {
       titleShop: "Shop",
-      productData: [],
+      productData: {},
     };
   },
   created() {

@@ -1,7 +1,7 @@
 <template>
   <div class="shop">
     <TitlePage :title="titleShop" />
-    <ProductsList :products="this.productsList"/>
+    <ProductsList :products="this.productsList" />
   </div>
 </template>
 
@@ -20,12 +20,11 @@ export default {
   created() {
     this.getProducts()
       .then((data) => (this.productsList = data))
-      .catch((err) => console.log(error));
+      .catch((error) => console.log(error));
   },
-  mixins: [ApiProducts]
+  mixins: [ApiProducts],
 };
 </script>
 
 <style lang="scss" scoped>
-
 </style>
